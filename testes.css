@@ -1,0 +1,158 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Menu */
+.menu {
+    background-color: #000; /* Fundo preto */
+    width: 100%; /* Ocupa a largura total da tela */
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+}
+
+.menu ul li {
+    margin: 0;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 15px 30px; /* Espaçamento interno nos links */
+    text-decoration: none;
+    color: #fff; /* Cor do texto */
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efeito hover */
+.menu ul li a:hover {
+    background-color: #ffa500; /* Cor de fundo laranja no hover */
+    color: #000; /* Texto preto no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li a {
+        padding: 15px;
+        width: 100%; /* Links ocupam toda a largura da tela */
+        text-align: center; /* Centraliza o texto nos links */
+    }
+}
+
+/* Contêiner Principal */
+.content-container {
+    display: flex; /* Usa flexbox para layout horizontal */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    justify-content: space-between; /* Espaça os itens de modo que eles fiquem nas extremidades */
+    padding: 20px; /* Adiciona um pouco de espaço ao redor do conteúdo */
+    max-width: 1200px; /* Limita a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+}
+
+/* Seção de Texto */
+.text-section {
+    flex: 1; /* Faz com que esta seção ocupe o espaço restante disponível */
+    padding-right: 20px; /* Espaçamento entre o texto e a imagem */
+}
+
+.text-section h2 {
+    font-size: 24px; /* Ajusta o tamanho do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.text-section p {
+    font-size: 16px; /* Ajusta o tamanho da descrição */
+    margin-bottom: 20px; /* Espaçamento abaixo da descrição */
+}
+
+.text-section button {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Ajusta o tamanho da fonte do botão */
+}
+
+.text-section button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+/* Seção de Imagem */
+.image-section {
+    flex: 1; /* Faz com que esta seção ocupe o espaço restante disponível */
+}
+
+.image-section img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura da seção */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Ajusta o grau de arredondamento dos cantos da imagem */
+}
+
+/* Container dos Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os cards */
+    justify-content: center; /* Centraliza os cards */
+    padding: 20px;
+}
+
+/* Estilo de cada Card */
+.product-card {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px; /* Largura dos cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px; /* Altura da imagem */
+    border-radius: 5px;
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
+
+.product-card h3 {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.product-card p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.product-card button {
+    background-color: #8401ff; /* Cor de fundo laranja */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product-card button:hover {
+    background-color: #ff5e00; /* Cor de fundo laranja escuro no hover */
+}
+
+/* Estilo do card ao passar o mouse */
+.product-card:hover {
+    transform: scale(1.05); /* Efeito de zoom no card */
+}

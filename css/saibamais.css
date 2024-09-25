@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*BACKGROUND*/
+body{
+    background-size: cover; /* Faz com que a imagem cubra toda a área do elemento */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-position: center; /* Centraliza a imagem */
+    background: #000000;
+}
+    /* Estilizando a logo */
+/* Estilizando a logo para ser redonda */
+.logo {
+    width: 60px; /* Diminuindo o tamanho da largura */
+    height: 60px; /* Diminuindo a altura para manter a proporção circular */
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover; /* Garante que a imagem se ajuste ao contorno */
+    display: block;
+    margin-left: 30px; /* Espaçamento da borda esquerda */
+    margin-right: 0px; /* Espaçamento entre a logo e o menu */
+    float: left; /* Faz com que a logo fique à esquerda do menu */
+}
+
+/* Estilização restante do menu */
+
+@keyframes rgb-colors-menu {
+    0% { color: rgb(255, 255, 255); }
+    33% { color: rgb(4, 255, 4); }
+    66% { color: rgb(0, 153, 255); }
+    100% { color: rgb(255, 174, 0); }
+}
+
+.menu {
+    width: 100%; /* Largura total */
+    background-color: #000000;
+    padding: 10px 0; /* Padding vertical para espaçamento interno */
+    overflow: hidden; /* Garante que o conteúdo não se sobreponha */
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centraliza os itens do menu */
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff; /* Cor do texto */
+    font-size: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: rgb-colors-menu 3s infinite; /* Animação de mudança de cor */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.menu ul li a:hover {
+    background-color: rgb(243, 62, 7); /* Cor de fundo laranja no hover */
+    color: #ffffff;
+}
+
+/* Botão de Login */
+
+.login-button {
+    background-color: #090dec;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 105px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    right: 80px; /* Espaçamento ajustado para o botão de login */
+    top: 20px; /* Mantém o espaçamento no topo */
+}
+
+.login-button:hover {
+    background-color: #df3501;
+}
+
+/* Botão de Carrinho */
+.cart-button {
+    background-color: transparent; /* Fundo transparente */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Espaçamento ajustado para o botão de carrinho */
+    top: 20px;
+}
+
+.cart-button img {
+    width: 40px; /* Tamanho do ícone do carrinho */
+    height: 30px; /* Tamanho do ícone do carrinho */
+}
+
+.cart-button:hover img {
+    filter: brightness(0.8); /* Efeito de escurecimento ao passar o mouse */
+}
+
+.page-title {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+    font-size: 36px;
+}
+
+.main-content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.section p {
+    color: #f7f6f6;
+    margin-bottom: 15px;
+}
+
+.section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #333;
+    color: #070707;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
