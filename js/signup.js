@@ -220,8 +220,12 @@ const closeButton = document.querySelector("#close-message");
 
 // Validate CEP Input
 cepInput.addEventListener("keypress", (e) => {
-  const onlyNumbers = /[0-9]/;
+  const onlyNumbers = /[0-9]|\./;
   const key = String.fromCharCode(e.keyCode);
+
+  console.log(key);
+
+  console.log(onlyNumbers.test(key));
 
   // allow only numbers
   if (!onlyNumbers.test(key)) {
@@ -242,8 +246,7 @@ cepInput.addEventListener("keyup", (e) => {
 
 // Get address from API
 const getAddress = async (cep) => {
- 
-    toggleLoader();
+  toggleLoader();
 
   cepInput.blur();
 
@@ -329,7 +332,7 @@ addressForm.addEventListener("submit", (e) => {
   setTimeout(() => {
     toggleLoader();
 
-    toggleMessage("Cadastro salvo com sucesso!");
+    toggleMessage("Endereço salvo com sucesso!");
 
     addressForm.reset();
 
