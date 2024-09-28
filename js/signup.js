@@ -319,23 +319,3 @@ const toggleMessage = (msg) => {
   fadeElement.classList.toggle("hide");
   messageElement.classList.toggle("hide");
 };
-
-// Close message modal
-closeButton.addEventListener("click", () => toggleMessage());
-
-// Save address
-addressForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  toggleLoader();
-
-  setTimeout(() => {
-    toggleLoader();
-
-    toggleMessage("Endereço salvo com sucesso!");
-
-    addressForm.reset();
-
-    toggleDisabled();
-  }, 1000);
-});
