@@ -36,14 +36,13 @@
                 <!--Dados pessoais-->
                
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" maxlength="40" placeholder="Digite seu nome completo" >
+                <input type="text" id="nome" name="nome" data-required data-only-letters data-min-length="3" data-max-length="40" placeholder="Digite seu nome completo" >
 
                 <label for="birth">Data de nascimento</label>
-                <input type="date" id="birth" name="birth" placeholder="Digite sua data de nascimento" >
+                <input type="date" id="birth" name="birth" placeholder="Digite sua data de nascimento" required>
 
                 <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" minlength="11" maxlength="11" placeholder="111.111.111-11"
-                    >
+                <input type="text" id="cpf" name="cpf" data-only-numbers minlength="11" maxlength="11" placeholder="111.111.111-11">
 
                     <br>
 
@@ -193,22 +192,26 @@
                 <!--Contato-->
 
                 <label for="celular">Celular:</label>
-                <input type="tel" id="celular" name="celular" minlength="11" maxlength="11"
-                    placeholder="99  9 9999-9999" >
+                <input type="tel" id="celular" name="celular" data-only-numbers minlength="11" maxlength="11"
+                    placeholder="(99)99999-9999" >
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu email" >
+                <input type="email" id="email" name="email" data-email-validate placeholder="Digite seu email" >
 
                 <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" >
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" data-password-validate data-required>
 
-                <label for="password1">Senha:</label>
-                <input type="password" id="password1" name="password1" placeholder="Confirme sua senha" >
+                <label for="passconfirmation">Senha:</label>
+                <input type="password" id="passconfirmation" name="passconfirmation" placeholder="Confirme sua senha" data-equal="password">
 
-                <button type="submit" class="login-btn">Criar conta</button>
+                <button type="submit" class="login-btn" id="btn-submit">Criar conta</button>
 
             </form>
-                <script src="/Projeto_BackEnd_1.0/js/signup.js"></script>
+
+            <p class="error-validation template"></p>    
+            <script src="/Projeto_BackEnd_1.0/js/signup.js"></script>
+
+                
 
 </body>
 
