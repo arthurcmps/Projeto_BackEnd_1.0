@@ -223,10 +223,6 @@ cepInput.addEventListener("keypress", (e) => {
   const onlyNumbers = /[0-9]|\./;
   const key = String.fromCharCode(e.keyCode);
 
-  console.log(key);
-
-  console.log(onlyNumbers.test(key));
-
   // allow only numbers
   if (!onlyNumbers.test(key)) {
     e.preventDefault();
@@ -264,6 +260,7 @@ const getAddress = async (cep) => {
   if (data.erro === "true") {
     if (!addressInput.hasAttribute("disabled")) {
       toggleDisabled();
+      return;
     }
 
     addressForm.reset();
@@ -319,3 +316,6 @@ const toggleMessage = (msg) => {
   fadeElement.classList.toggle("hide");
   messageElement.classList.toggle("hide");
 };
+
+//close message
+closeButton.addEventListener("click", () => toggleMessage())
